@@ -1,6 +1,7 @@
 import React from "react";
 import Navbars from "./Components/Navbars";
 import About from "./Components/About";
+import Projects from "./Components/Projects";
 
 function App() {
   return (
@@ -9,6 +10,8 @@ function App() {
       <hl></hl>
       <About />
       <hl></hl>
+      <Projects />
+      <hr></hr>
     </main>
   );
 }
