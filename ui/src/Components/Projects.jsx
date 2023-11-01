@@ -6,7 +6,7 @@ import { projectsData } from '../data';
 
 function Projects() {
     return(
-        <section>
+        <section id='projects'>
             <div className="container px-5 py-10 mx-auto text-center lg:px-40">
             <div className="flex flex-col w-full mb-20">
             <CodeIcon className="mx-auto inline-block w-10 mb-4" />
@@ -26,7 +26,7 @@ function Projects() {
         <Card.Body className="bg-gray-900">
           <Card.Title className='text-white'>{data.title}</Card.Title>
           <Card.Text className='text-white'>{data.description}</Card.Text>
-          <Button variant="success">View</Button>
+          <Button variant="success" href={data.link}>View</Button>
         </Card.Body>
       </Card>
     </div>

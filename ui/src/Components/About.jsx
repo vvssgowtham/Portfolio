@@ -26,9 +26,9 @@ function About() {
 knowledge and gain practical experience.
       </p>
       <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-        <button type="button" className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
-          Default
-        </button>
+        <a href="#projects"><button type="button" className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
+          Projects
+        </button></a>
       </div>
     </div>
   </div>

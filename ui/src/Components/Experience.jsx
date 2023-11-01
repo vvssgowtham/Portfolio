@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card';
 
 function Experience() {
     return(
-        <section href="#Experience">
+        <section id="experience">
             <div className="container px-5 py-10 mx-auto">
             <div className="text-center mb-20">
             <center><HiAcademicCap style={{width: '75px',height:'60px'}} className="py-2"/></center>
