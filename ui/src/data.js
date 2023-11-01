@@ -10,3 +10,5 @@ export const projectsData = [
         image : 'Images/Authentication.jpg'
     }
 ]
+
+export const skillsData = ['Java','OOP','DBMS','React','NodeJS','ExpressJS','MongoDB'];
