@@ -20,7 +20,7 @@ function Projects() {
           </p>
           <div className="d-flex flex-row flex-wrap">
   {projectsData.map((data) => (
-    <div key={data.id} className="p-4"> {/* Use p-2 for equal spacing between cards */}
+    <div key={data.id} className="p-2"> {/* Use p-2 for equal spacing between cards */}
       <Card style={{ width: '25rem' }}>
         <Card.Img variant="top" src={data.image} style={{ width: '100%',height: '15rem' }} /> {/* Make images equal width */}
         <Card.Body className="bg-gray-900">
