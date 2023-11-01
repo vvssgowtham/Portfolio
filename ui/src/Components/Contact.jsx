@@ -1,13 +1,23 @@
-import React,{useState} from "react";
+import React,{useState,useRef} from "react";
 import { Button } from "react-bootstrap";
 import axios from "axios";
+import emailjs from '@emailjs/browser';
 
 
 function Contact() {
 
+  const form = useRef();  
   const [formData,setFormData] = useState({name:'',email:'',message:''});
   const handleSubmit = async(e) => {
     e.preventDefault();
+    //for getting email
+    emailjs.sendForm('service_lqtm3dt', 'template_2h3s7y6', form.current, 'GDfVX-so9aDKYecc_')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      //for backend connection
       await axios.post('http://localhost:5000/submit-form', formData).then(response =>{ alert(response);  
     })
       .catch(e => {alert('Error occurred: ' + e);
@@ -28,7 +38,7 @@ function Contact() {
             ></iframe>
           </div>
         </div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} ref={form}>
         <h2 className="text-white sm:text-4xl text-3xl mb-3 font-medium title-font">
             Hire Me
         </h2>
@@ -41,19 +51,19 @@ function Contact() {
           <input type="text" 
           className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" 
           value={formData.name}
-          onChange={(e) => setFormData({...formData,name: e.target.value})} />
+          onChange={(e) => setFormData({...formData,name: e.target.value})} name="user_name"/>
         </div>
         <div className="form-group">
           <label className="float-left py-1 text-lg font-medium text-white">Email</label>
           <input type="email" className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             value={formData.email}
-            onChange={(e) => setFormData({...formData,email: e.target.value})} />
+            onChange={(e) => setFormData({...formData,email: e.target.value})} name="user_email" />
         </div>
         <div className="form-group">
           <label htmlFor="message" className="float-left py-1 text-lg font-medium text-white">Message</label>
           <textarea className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" id="message" style={{height:'95px'}} 
             value={formData.message}
-            onChange={(e) => setFormData({...formData,message:e.target.value})}
+            onChange={(e) => setFormData({...formData,message:e.target.value})} name="message"
           />
         </div>
         <div className="form-group py-3">
