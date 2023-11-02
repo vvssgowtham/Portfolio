@@ -22,7 +22,7 @@ function Contact() {
     })
       .catch(e => {alert('Error occurred: ' + e);
     }); 
-    setFormData({name:'',email:'',message:''});
+    window.location.reload();
   };
 
     return (
