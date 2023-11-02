@@ -23,7 +23,7 @@ function Experience() {
         <Card.Body className="bg-gray-800" style={{height: '100%'}}>
           <Card.Title className='text-white'>{data.title}</Card.Title>
           <Card.Text className='text-white' style={{height:'7rem'}}>{data.description}</Card.Text>
-          <Button variant="success">View</Button>
+          <Button variant="success" href={data.link}>View</Button>
         </Card.Body>
       </Card>
     </div>
