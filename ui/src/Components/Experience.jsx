@@ -9,7 +9,7 @@ function Experience() {
     <section id="experience">
       <div className="container px-2 sm:px-5 py-5 md:py-10 mx-auto">
         <div className="text-center mb-5 sm:mb-10">
-          <div>
+          <div className="d-flex justify-content-center align-items-center">
             <HiAcademicCap
               style={{ width: "75px", height: "60px" }}
               className="py-2"

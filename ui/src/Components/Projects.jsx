@@ -17,20 +17,20 @@ function Projects() {
             Explore a showcase of my diverse projects, spanning web development and more. These projects reflect my skills, creativity, and commitment to delivering high-quality solutions. From responsive websites to innovative apps, each project tells a unique story of problem-solving and excellence.
           </p>
         </div>
-        <div className="d-flex flex-wrap">
-          {projectsData.map((data) => (
-            <div key={data.id} className="p-2 col-12 col-md-6 col-lg-4 col-xl-3"> {/* Adjust the column sizes for responsiveness */}
-              <Card style={{ width: '100%' }}>
-                <Card.Img variant="top" src={data.image} style={{ width: '100%', height: '15rem' }} />
-                <Card.Body className="bg-gray-900">
-                  <Card.Title className='text-white'>{data.title}</Card.Title>
-                  <Card.Text className='text-white'>{data.description}</Card.Text>
-                  <Button variant="success" href={data.link}>View</Button>
-                </Card.Body>
-              </Card>
-            </div>
-          ))}
-        </div>
+        <div className="d-flex flex-wrap justify-content-between">
+    {projectsData.map((data) => (
+      <div key={data.id} className="p-2 col-12 col-md-6 col-lg-4 col-xl-3 mb-2"> {/* Adjust the column sizes for responsiveness and add spacing */}
+        <Card style={{ width: '100%' }}>
+          <Card.Img variant="top" src={data.image} style={{ width: '100%', height: '250px' }} />
+          <Card.Body className="bg-gray-800">
+            <Card.Title className='text-white'>{data.title}</Card.Title>
+            <Card.Text className='text-white' style={{ maxHeight: "5rem", overflow: "hidden" }}>{data.description}</Card.Text>
+            <Button variant="success" href={data.link}>View</Button>
+          </Card.Body>
+        </Card>
+      </div>
+    ))}
+  </div>
       </div>
     </section>
   );
