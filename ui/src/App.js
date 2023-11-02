@@ -12,7 +12,7 @@ function App() {
       <Navbars />
       <hl></hl>
       <About />
-      <hl></hl>
+      <hr></hr>
       <Projects />
       <hr></hr>
       <Skills />
