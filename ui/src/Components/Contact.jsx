@@ -14,7 +14,7 @@ function Contact() {
     emailjs.sendForm('service_lqtm3dt', 'template_2h3s7y6', form.current, 'GDfVX-so9aDKYecc_')
       .then((result) => {
           console.log(result.text);
-          window.location.reload(3); 
+          setFormData({name:'',email:'',message:''}); 
       }, (error) => {
           console.log(error.text);
       });
@@ -22,7 +22,7 @@ function Contact() {
       await axios.post('https://portfolio-server-58by.onrender.com/submit-form', formData)
       .then(response =>{
          alert('Message Sent Successfully');
-         window.location.reload(3);  
+         setFormData({name:'',email:'',message:''});
     })
       .catch(e => {alert('Error occurred: ' + e);
     }); 
