@@ -22,7 +22,7 @@ function Contact() {
     })
       .catch(e => {alert('Error occurred: ' + e);
     }); 
-    window.location.reload();
+    window.location.reload(3);
   };
 
     return (
