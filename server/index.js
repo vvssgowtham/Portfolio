@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.post('/submit-form', (req, res) => {
     const formData = req.body;
     console.log(formData);
-    res.send('Form data received');
+    res.json('Form data received');
 });
 
 app.listen(5000, () => {
