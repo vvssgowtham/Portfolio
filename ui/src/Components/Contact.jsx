@@ -18,7 +18,7 @@ function Contact() {
           console.log(error.text);
       });
       //for backend connection
-      await axios.post('http://localhost:5000/submit-form', formData).then(response =>{ alert('Message Sent Successfully');  
+      await axios.post('https://portfolio-server-58by.onrender.com/submit-form', formData).then(response =>{ alert('Message Sent Successfully');  
     })
       .catch(e => {alert('Error occurred: ' + e);
     }); 
