@@ -2,6 +2,17 @@ import Experience from "./Components/Experience";
 
 export const projectsData = [
     {
+        title : 'Blog Application',
+        description : 'Builded a blog application using MERN stack and used Vercel and Render for Hosting.',
+        image : 'Images/BlogHere.jpg',
+        link : 'https://bloghere.vercel.app/',
+    },{
+        title : 'InstaSave',
+        description : 'Builded a web application which downloads the instagram post directly into their gallery using the post link.',
+        image : 'Images/InstaSave.jpg',
+        link : 'https://instasave-olive.vercel.app/'
+    }
+    ,{
         title : 'Credit Card Approval',
         description : 'Builded a model which predicts the approval of a credit card for a person based on the data available.',
         image : 'Images/DataScience.png',
