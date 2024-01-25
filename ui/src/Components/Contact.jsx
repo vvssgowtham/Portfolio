@@ -21,9 +21,13 @@ function Contact() {
           })
           .catch(e => {
             alert('Error occurred: ' + e);
+          })
+          .finally(() => {
+            setLoading(false); // Set loading state to false after the request is complete
           });
       }, (error) => {
         console.log(error.text);
+        setLoading(false);
       });
 
     // For backend connection
