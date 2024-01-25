@@ -6,10 +6,11 @@ import emailjs from '@emailjs/browser';
 function Contact() {
   const form = useRef();
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setLoading(true);
     // For sending email
     emailjs.sendForm('service_lqtm3dt', 'template_2h3s7y6', form.current, 'GDfVX-so9aDKYecc_')
       .then(async (result) => {
@@ -73,7 +74,9 @@ function Contact() {
                 />
               </div>
               <div className="form-group py-3">
-                <Button variant="success" type="submit">Submit</Button>
+                <Button variant="success" type="submit" disabled={loading}>
+                  {loading ? 'Loading...' : 'Submit'}
+                </Button>
               </div>
             </form>
           </div>
