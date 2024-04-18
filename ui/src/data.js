@@ -33,13 +33,13 @@ export const experienceData = [
         title : 'NPTEL DataScience For Engineers',
         description : 'Certified Elite Silver in DataScience for Engineers course provided by IIT Madras',
         image : 'Images/Nptel.png',
-        link : 'https://github.com/vvssgowtham/Certifications/blob/main/Data%20Science%20For%20Engineers.pdf'
+        link : 'https://drive.google.com/file/d/1pxj8Xo0lzsRcvBahblJrwYHMwx0Pi4aX/view?usp=drive_link'
     },
     {
         title : 'JAVA Skill Verification By HackerRank',
         description : 'Certified for JAVA BASIC Skill Verification test provided by reputed organisation HackerRank.',
         image : 'Images/HackerRank.png',
-        link : 'https://github.com/vvssgowtham/Certifications/blob/main/java_basic%20certificate.pdf'
+        link : 'https://drive.google.com/file/d/1S_xaDeAPEfXsyuv4q1ITDS2CmdrxShev/view?usp=drive_link'
     },
     {
         title : 'Google Developer Students Club',
@@ -51,6 +51,6 @@ export const experienceData = [
         title : 'SQL Skill Verification By HackerRank',
         description : 'Certified for SQL BASIC Skill Verification test provided by reputed organisation HackerRank.',
         image : 'Images/HackerRank.png',
-        link : 'https://github.com/vvssgowtham/Certifications/blob/main/sql_basic%20certificate.pdf'
+        link : 'https://drive.google.com/file/d/1YbDpJCZQERqSreO0pxuw8EW9BbgJ95eg/view?usp=drive_link'
     }
 ]
