@@ -11,7 +11,12 @@ export const projectsData = [
         description : 'Builded a web application which downloads the instagram post directly into their gallery using the post link.',
         image : 'Images/InstaSave.jpg',
         link : 'https://instasave-olive.vercel.app/'
-    }
+    },{
+        title : 'Visualize',
+        description : 'Builded a web application which helps visualize weather dynamics for next 3 days.',
+        image : 'Images/visualize.png',
+        link : 'https://visualize-charts.vercel.app/'
+    },
     ,{
         title : 'Credit Card Approval',
         description : 'Builded a model which predicts the approval of a credit card for a person based on the data available.',
